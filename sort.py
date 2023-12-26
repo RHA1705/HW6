@@ -48,7 +48,7 @@ def sort(path):
         print(item_path)
         if os.path.isfile(item_path):
             filename, file_extension = os.path.splitext(el)
-            file_extension = file_extension.replace('.', '').lower() # /folder/file.txt -> folder, file, .txt
+            file_extension = file_extension.replace('.', '').lower()
 
             KNOWN_FILES.append(el)
             
@@ -119,7 +119,6 @@ def write_to_file(path, items):
 
 if __name__ == "__main__":
     folder_path = sys.argv[1]
-    # folder_path = 'test_garbage_folder_etalon'
 
     create_target_folders(folder_path)
     make_folders(folder_path)
